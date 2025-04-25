@@ -16,19 +16,19 @@
 
   <style>
     body {
-  background: linear-gradient(135deg, #2e0854, #9b59b6);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+      background: linear-gradient(135deg, #2e0854, #9b59b6);
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     .carousel {
       max-width: 500px;
@@ -46,20 +46,20 @@
       margin: 20px 0;
     }
     .music-button {
-    display: inline-flex; /* <-- aqui */
-    align-items: center;
-    gap: 10px;
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: white;
-    color: #db7093;
-    border: none;
-    border-radius: 10px;
-    width: auto; /* <-- aqui */
-    margin: 10px auto;
-    transition: background 0.3s;
-    text-align: center;
-  }
+      display: inline-flex; /* <-- aqui */
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: white;
+      color: #db7093;
+      border: none;
+      border-radius: 10px;
+      width: auto; /* <-- aqui */
+      margin: 10px auto;
+      transition: background 0.3s;
+      text-align: center;
+    }
     .music-button:hover {
       background-color: #8e2de2;
       color: white;
@@ -71,6 +71,9 @@
       max-width: 600px;
       margin: 0 auto;
     }
+    #carouselExampleIndicators .carousel-inner .carousel-item:nth-child(6) img {
+  object-position: center top;   /* ou “center center”, “50% 30%”, etc */
+}
   </style>
 </head>
 <body>
@@ -81,6 +84,9 @@
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button> <!-- novo -->
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></button> <!-- novo -->
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"></button> <!-- novo -->
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -91,6 +97,15 @@
       </div>
       <div class="carousel-item">
         <img src="/eu3.jpeg" class="d-block w-100" alt="Terceiro Slide">
+      </div>
+      <div class="carousel-item"> <!-- novo -->
+        <img src="/eu4.jpeg" class="d-block w-100" alt="Quarto Slide">
+      </div>
+      <div class="carousel-item"> <!-- novo -->
+        <img src="/eu5.jpeg" class="d-block w-100" alt="Quinto Slide">
+      </div>
+      <div class="carousel-item"> <!-- novo -->
+        <img src="/eu6.jpeg" class="d-100 w-100" alt="Sexto Slide">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -105,7 +120,7 @@
 
   <!-- Mensagem Romântica -->
   <div class="romantic-message">
-    Cada imagem é uma lembrança do nosso amor. Te amo mais a cada dia! ❤️
+    Feliz mêsversario mor, tirei um tempinho para fazer isso pra você e te lembrar que cada foto dessa é um momento feliz nas nossas vidas, TE AMO ❤️
   </div>
 
   <!-- Botão de Música -->
@@ -178,7 +193,7 @@
         years--;
       }
 
-      countupElement.innerHTML = `${years} anos, ${months} meses, ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos ❤️`;
+      countupElement.innerHTML = `${years} ano, ${months} meses, ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos ❤️`;
     }
 
     setInterval(updateCountup, 1000);
